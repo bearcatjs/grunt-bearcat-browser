@@ -1,0 +1,42 @@
+{
+  "name": "grunt-bearcat-browser",
+  "description": "grunt bearcat browser task",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bearcatjs/grunt-bearcat-browser",
+  "author": {
+    "name": "fantasyni",
+    "email": "fantasyni@163.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bearcatjs/grunt-bearcat-browser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bearcatjs/grunt-bearcat-browser/issues"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/bearcatjs/grunt-bearcat-browser/blob/master/LICENSE-MIT"
+  }],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "bearcat": "0.4.x"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

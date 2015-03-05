@@ -1,11 +1,6 @@
 # grunt-bearcat-browser
 
-> grunt bearcat browser task
-
 ## Getting Started
-This plugin requires Grunt `~0.4.5`
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
 npm install grunt-bearcat-browser --save-dev
@@ -37,50 +32,64 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.dest
 Type: `String`
-Default value: `',  '`
+Default value: `bearcat-bootstrap.js`
 
-A string value that is used to do something with whatever.
+the ***bearcat-bootstrap.js*** generated path  
 
-#### options.punctuation
+#### options.context
 Type: `String`
-Default value: `'.'`
+Default value: `context.json`
 
-A string value that is used to do something else with whatever else.
+the ***context.json*** file used for browser(client) path  
+
+#### options.config
+Type: `String`
+Default value: `pwd/config`
+
+config directory path
+
+#### options.env
+Type: `String`
+Default value: `dev`
+
+setup env
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
 ```js
 grunt.initConfig({
-  bearcat_browser: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+   bearcat_browser: {
+      default: {
+        dest: "bearcat-bootstrap.js",
+        context: "client-context.json"
+      }
+    }
 });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+## License
 
-```js
-grunt.initConfig({
-  bearcat_browser: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+(The MIT License)
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+Copyright (c) fantasyni and other contributors
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
